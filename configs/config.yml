@@ -1,0 +1,24 @@
+server:
+  host:
+  port: 9876
+
+bank:
+  add_tries_count: 2
+  withdraw_tries_count: 2
+  transfer_tries_count: 2
+
+  rates_api_token: c64ab6200bdab20eaa9fe12b6d47c94c
+
+database:
+  host: database
+  port: 5432
+
+  name: docker
+  user: docker
+  password: docker
+
+  conn_try_time: 5
+  conn_tries_cnt: 10
+
+  max_open_conns: 16
+  max_idle_conns: 16

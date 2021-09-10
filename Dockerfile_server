@@ -1,0 +1,17 @@
+FROM golang:1.16
+
+WORKDIR /bank
+
+ENV LOG_LEVEL debug
+
+COPY pkg /bank/pkg
+COPY cmd /bank/cmd
+COPY go.mod /bank/go.mod
+COPY go.sum /bank/go.sum
+
+COPY scripts /bank/scripts
+
+RUN ["chmod", "+x", "/bank/scripts/build.sh"]
+RUN ["/bank/scripts/build.sh"]
+
+RUN ["chmod", "+x", "/bank/balances_server"]

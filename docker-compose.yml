@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  database:
+    image: vnch/balances_db
+    container_name: balances_pg_db
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+
+  server:
+    image: vnch/balances_server
+    container_name: balances_server
+    command: [ "/bank/balances_server", "--config", "config.yml" ]
+    volumes:
+      - ./configs/config.yml:/bank/config.yml
+    ports:
+      - "9876:9876"
+    depends_on:
+      - database

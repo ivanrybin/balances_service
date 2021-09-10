@@ -1,0 +1,7 @@
+FROM postgres:12
+
+ENV POSTGRES_DB docker
+ENV POSTGRES_USER docker
+ENV POSTGRES_PASSWORD docker
+
+COPY ./api/db_schema.sql /docker-entrypoint-initdb.d/db_schema.sql

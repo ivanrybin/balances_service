@@ -1,0 +1,32 @@
+GET http://localhost:9876/
+Accept: application/json
+
+###
+
+GET http://localhost:9876/balance
+Accept: application/json
+
+{ "id": 1 }
+
+###
+
+POST http://localhost:9876/add
+Accept: application/json
+
+{ "id": 1, "cents_sum" : 10000 }
+
+###
+
+POST http://localhost:9876/withdraw
+Accept: application/json
+
+{ "id": 1, "cents_sum" : 10000 }
+
+###
+
+POST http://localhost:9876/transfer
+Accept: application/json
+
+{ "sender_id" : 1, "recipient_id": 2, "cents_sum": 50000 }
+
+###
