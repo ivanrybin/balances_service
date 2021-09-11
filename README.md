@@ -40,7 +40,7 @@ balances_server | time="10:00:47 2021-09-10" level=info msg="daemon started"
 balances_server | time="10:00:47 2021-09-10" level=info msg="listening :9876"
 ```
 
-After successful deployment you can request service by default port `9876` with gRPC client.
+After successful deployment you can request service by default port `9876`.
 
 Server and database images setup available in `Dockerfile_server` and `Dockerfile_db` files.
 
