@@ -14,7 +14,7 @@ All operations in cents (russian kopeks).
 | GET | `/balance?currency=${CURRENCY}` |  `{"id": 1 }` | `{"cents_sum": 1742}` | account balance by account id, where `CURRENCY` from https://exchangeratesapi.io/ supported currencies |
 | POST | `/add` | `{"id": 1, "cents_sum": 1742}`| - | add sum of 17.42 RUB |
 | POST | `/withdraw` | `{"id": 1, "cents_sum": 314}`| - | withdraw sum of 3.14 RUB |
-| POST | `/transfer` | `{"sender_id": 1, "recipient_id": 2, "cents_sum": 2.17}`| - | transfer sum of 2.14 RUB from account 1 to 2 |
+| POST | `/transfer` | `{"sender_id": 1, "recipient_id": 2, "cents_sum": 217}`| - | transfer sum of 2.14 RUB from account 1 to 2 |
 
 First `/add` creates account with such id. 
 
